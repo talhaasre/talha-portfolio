@@ -1,0 +1,1758 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talha Asre — ERP, Healthcare EMR & Cloud Software Engineer | Kuwait</title>
+    <meta name="description"
+        content="Talha Asre is a Software Engineer in Kuwait City building custom ERP systems, Healthcare EMR software, salon & clinic management platforms, CRMs, admin panels, and cloud & DevOps automation for businesses worldwide.">
+    <meta name="keywords"
+        content="ERP software development, Healthcare EMR system, Salon management software, Clinic management system, Custom CRM development, Cloud DevOps engineer, AI automation solutions, Admin panel development, Software Engineer Kuwait">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --navy: #0d1826;
+            --navy-2: #101f33;
+            --navy-border: rgba(255, 255, 255, 0.08);
+            --blue: #4b8bf5;
+            --blue-light: #dbe9ff;
+            --ink: #0d1826;
+            --gray-600: #5b6472;
+            --gray-400: #8993a1;
+            --bg-soft: #f3f5f8;
+            --white: #ffffff;
+            --green: #22c55e;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+            color: var(--ink);
+            background: var(--white);
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        section[id] {
+            scroll-margin-top: 90px;
+        }
+
+        @media (max-width:768px) {
+            section {
+                padding: 64px 0;
+            }
+
+            .container {
+                padding: 0 20px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* ---------- Scroll reveal ---------- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity .7s cubic-bezier(.16, .84, .44, 1), transform .7s cubic-bezier(.16, .84, .44, 1);
+        }
+
+        .reveal.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-group .reveal:nth-child(1) {
+            transition-delay: 0s;
+        }
+
+        .reveal-group .reveal:nth-child(2) {
+            transition-delay: .1s;
+        }
+
+        .reveal-group .reveal:nth-child(3) {
+            transition-delay: .2s;
+        }
+
+        .reveal-group .reveal:nth-child(4) {
+            transition-delay: .3s;
+        }
+
+        /* ---------- Hero load-in ---------- */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(22px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-anim {
+            opacity: 0;
+            animation: fadeUp .8s cubic-bezier(.16, .84, .44, 1) forwards;
+        }
+
+        .hero-anim.d1 {
+            animation-delay: .05s;
+        }
+
+        .hero-anim.d2 {
+            animation-delay: .15s;
+        }
+
+        .hero-anim.d3 {
+            animation-delay: .25s;
+        }
+
+        .hero-anim.d4 {
+            animation-delay: .35s;
+        }
+
+        .hero-anim.d5 {
+            animation-delay: .45s;
+        }
+
+        @keyframes pulseDot {
+
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(75, 139, 245, 0.45);
+            }
+
+            50% {
+                box-shadow: 0 0 0 6px rgba(75, 139, 245, 0);
+            }
+        }
+
+        .badge .dot {
+            animation: pulseDot 2s ease-in-out infinite;
+        }
+
+        @keyframes pulseDotGreen {
+
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.45);
+            }
+
+            50% {
+                box-shadow: 0 0 0 6px rgba(34, 197, 94, 0);
+            }
+        }
+
+        .status-box .dot {
+            animation: pulseDotGreen 2s ease-in-out infinite;
+        }
+
+        /* ---------- Buttons ---------- */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 13px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14.5px;
+            cursor: pointer;
+            border: none;
+            transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: var(--blue);
+            color: #fff;
+            box-shadow: 0 8px 20px rgba(75, 139, 245, 0.35);
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 12px 26px rgba(75, 139, 245, 0.45);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--navy-border);
+            color: #fff;
+        }
+
+        .btn-light-outline {
+            background: transparent;
+            border: 1px solid #d7dce3;
+            color: var(--ink);
+        }
+
+        .btn-dark {
+            background: var(--navy);
+            color: #fff;
+        }
+
+        /* ---------- Header ---------- */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(13, 24, 38, 0.92);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--navy-border);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 78px;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: -0.02em;
+        }
+
+        .logo span {
+            color: var(--blue);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 36px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #c7cdd6;
+            font-size: 14.5px;
+            font-weight: 500;
+            position: relative;
+            padding-bottom: 4px;
+            transition: color .2s ease;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0%;
+            height: 2px;
+            background: var(--blue);
+            transition: width .25s ease;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: #fff;
+        }
+
+        .nav-links a.active {
+            color: #fff;
+        }
+
+        @media (max-width:900px) {
+            .nav-links {
+                display: none;
+            }
+        }
+
+        /* ---------- Hero ---------- */
+        .hero {
+            background: linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
+            color: #fff;
+            padding: 80px 0 90px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        @media (max-width:900px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(75, 139, 245, 0.12);
+            border: 1px solid rgba(75, 139, 245, 0.35);
+            color: var(--blue);
+            font-size: 12.5px;
+            font-weight: 600;
+            padding: 7px 14px;
+            border-radius: 999px;
+            margin-bottom: 24px;
+        }
+
+        .badge .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--blue);
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            line-height: 1.08;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 .accent {
+            color: var(--blue);
+        }
+
+        .hero p {
+            color: #a9b2bf;
+            font-size: 16.5px;
+            line-height: 1.6;
+            max-width: 520px;
+            margin-bottom: 32px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 14px;
+            margin-bottom: 56px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 56px;
+        }
+
+        .stat-num {
+            font-size: 30px;
+            font-weight: 800;
+            color: #fff;
+        }
+
+        .stat-label {
+            font-size: 12.5px;
+            color: #8993a1;
+            margin-top: 4px;
+        }
+
+        .hero-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--navy-border);
+            border-radius: 16px;
+            padding: 28px;
+            text-align: center;
+        }
+
+        .avatar {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            margin: 0 auto 14px;
+            background: #2a3a52 center/cover;
+            border: 2px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .hero-card h3 {
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: 3px;
+        }
+
+        .hero-card .role {
+            font-size: 13px;
+            color: #8993a1;
+            margin-bottom: 18px;
+        }
+
+        .pill-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-bottom: 8px;
+        }
+
+        .pill {
+            font-size: 12px;
+            font-weight: 600;
+            padding: 6px 12px;
+            border-radius: 6px;
+            background: rgba(75, 139, 245, 0.12);
+            color: #8fb3f7;
+            border: 1px solid rgba(75, 139, 245, 0.25);
+        }
+
+        .status-box {
+            margin-top: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(34, 197, 94, 0.1);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            border-radius: 8px;
+            padding: 10px 12px;
+            font-size: 11.5px;
+            color: #7fe0a3;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .status-box .dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--green);
+            flex-shrink: 0;
+        }
+
+        /* ---------- Marquee strip ---------- */
+        .marquee-strip {
+            background: var(--navy-2);
+            border-top: 1px solid var(--navy-border);
+            border-bottom: 1px solid var(--navy-border);
+            overflow: hidden;
+            padding: 16px 0;
+        }
+
+        .marquee-track {
+            display: flex;
+            gap: 0;
+            white-space: nowrap;
+            animation: scroll-left 30s linear infinite;
+            width: max-content;
+        }
+
+        .marquee-track span {
+            color: #7c8798;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 0 28px;
+            border-right: 1px solid var(--navy-border);
+        }
+
+        @keyframes scroll-left {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* ---------- Eyebrow / heading pattern ---------- */
+        .eyebrow {
+            color: var(--blue);
+            font-size: 12.5px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        .section-title {
+            font-size: 36px;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            line-height: 1.15;
+            max-width: 560px;
+        }
+
+        .section-sub {
+            color: var(--gray-600);
+            font-size: 15.5px;
+            line-height: 1.6;
+            max-width: 520px;
+            margin-top: 16px;
+        }
+
+        /* ---------- About ---------- */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 56px;
+            align-items: center;
+            margin-top: 48px;
+        }
+
+        @media (max-width:900px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .about-photo {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            background: #1b2537;
+        }
+
+        .about-photo img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+        }
+
+        .photo-badge {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: #fff;
+            border-radius: 10px;
+            padding: 8px 14px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .photo-badge .num {
+            font-size: 16px;
+            font-weight: 800;
+            color: var(--ink);
+        }
+
+        .photo-badge .lbl {
+            font-size: 9.5px;
+            color: var(--gray-600);
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        .photo-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), transparent);
+            padding: 40px 18px 16px;
+            color: #fff;
+        }
+
+        .photo-caption strong {
+            font-size: 15px;
+            display: block;
+        }
+
+        .photo-caption span {
+            font-size: 12px;
+            color: #c7cdd6;
+        }
+
+        .about-copy h3 {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 14px;
+            letter-spacing: -0.01em;
+        }
+
+        .about-copy p {
+            color: var(--gray-600);
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 14px;
+        }
+
+        .tag-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .tag {
+            font-size: 12.5px;
+            font-weight: 600;
+            padding: 8px 14px;
+            border-radius: 7px;
+            background: var(--bg-soft);
+            color: var(--ink);
+            border: 1px solid #e6e9ee;
+            transition: background .25s ease, color .25s ease, border-color .25s ease, transform .25s ease;
+        }
+
+        .tag:hover {
+            background: var(--navy);
+            color: #fff;
+            border-color: var(--navy);
+            transform: translateY(-2px);
+        }
+
+        /* ---------- Services ---------- */
+        .services {
+            background: var(--bg-soft);
+        }
+
+        .service-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        @media (max-width:900px) {
+            .service-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .service-card {
+            background: #fff;
+            border-radius: 14px;
+            padding: 28px;
+            border: 1px solid #e9ecf1;
+            transition: transform .3s cubic-bezier(.16, .84, .44, 1), box-shadow .3s ease, border-color .3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(13, 24, 38, 0.1);
+            border-color: transparent;
+        }
+
+        .icon-box {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            background: var(--navy);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: #fff;
+            font-size: 18px;
+            transition: transform .3s ease;
+        }
+
+        .service-card:hover .icon-box {
+            transform: scale(1.08) rotate(-4deg);
+        }
+
+        .service-card h4 {
+            font-size: 17.5px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            font-size: 14px;
+            color: var(--gray-600);
+            line-height: 1.65;
+            margin-bottom: 18px;
+        }
+
+        .service-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .service-tags span {
+            font-size: 11.5px;
+            font-weight: 600;
+            color: var(--blue);
+            background: var(--blue-light);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        /* ---------- Portfolio ---------- */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        @media (max-width:768px) {
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .project-card {
+            border-radius: 14px;
+            overflow: hidden;
+            border: 1px solid #e9ecf1;
+            transition: transform .3s cubic-bezier(.16, .84, .44, 1), box-shadow .3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(13, 24, 38, 0.12);
+        }
+
+        .project-thumb {
+            height: 190px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-thumb .initials {
+            font-size: 44px;
+            font-weight: 800;
+            opacity: 0.35;
+            transition: transform .4s ease;
+        }
+
+        .project-card:hover .initials {
+            transform: scale(1.12);
+        }
+
+        .project-tag {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 5px 10px;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--ink);
+        }
+
+        .project-tag.on-dark {
+            background: rgba(255, 255, 255, 0.15);
+            color: #fff;
+            backdrop-filter: blur(4px);
+        }
+
+        .project-body {
+            padding: 20px;
+        }
+
+        .project-body .meta {
+            font-size: 11.5px;
+            color: var(--gray-400);
+            font-weight: 600;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+
+        .project-body h4 {
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .project-body p {
+            font-size: 13.5px;
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+
+        .thumb-1 {
+            background: #dde6f5;
+        }
+
+        .thumb-2 {
+            background: #132234;
+        }
+
+        .thumb-2 .initials {
+            color: #fff;
+            opacity: 0.5;
+        }
+
+        .thumb-3 {
+            background: linear-gradient(135deg, #1447e6, #0a2a91);
+        }
+
+        .thumb-3 .initials {
+            color: #fff;
+            opacity: 0.5;
+        }
+
+        .thumb-4 {
+            background: linear-gradient(135deg, #3a1420, #210a12);
+        }
+
+        .thumb-4 .initials {
+            color: #fff;
+            opacity: 0.5;
+        }
+
+        .center-btn {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        /* ---------- Process ---------- */
+        .process {
+            background: var(--bg-soft);
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            margin-top: 56px;
+            text-align: center;
+        }
+
+        @media (max-width:768px) {
+            .process-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .step-num {
+            width: 44px;
+            height: 44px;
+            border: 1px solid #d7dce3;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 700;
+            margin: 0 auto 18px;
+            background: #fff;
+        }
+
+        .process-grid h5 {
+            font-size: 15.5px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .process-grid p {
+            font-size: 13.5px;
+            color: var(--gray-600);
+            line-height: 1.6;
+            max-width: 220px;
+            margin: 0 auto;
+        }
+
+        .process-header {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* ---------- Testimonials ---------- */
+        .testimonials {
+            background: var(--navy);
+            color: #fff;
+        }
+
+        .testimonials .eyebrow {
+            color: var(--blue);
+        }
+
+        .testi-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        @media (max-width:900px) {
+            .testi-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .testi-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--navy-border);
+            border-radius: 14px;
+            padding: 26px;
+            transition: transform .3s ease, background .3s ease, border-color .3s ease;
+        }
+
+        .testi-card:hover {
+            transform: translateY(-6px);
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(75, 139, 245, 0.3);
+        }
+
+        .stars {
+            color: #fbbf24;
+            font-size: 13px;
+            margin-bottom: 16px;
+            letter-spacing: 2px;
+        }
+
+        .testi-card p {
+            font-size: 14px;
+            color: #c7cdd6;
+            line-height: 1.7;
+            margin-bottom: 22px;
+        }
+
+        .testi-person {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .testi-avatar {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: var(--blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12.5px;
+            font-weight: 700;
+            color: #fff;
+            flex-shrink: 0;
+        }
+
+        .testi-person strong {
+            font-size: 13.5px;
+            display: block;
+        }
+
+        .testi-person span {
+            font-size: 12px;
+            color: #8993a1;
+        }
+
+        /* ---------- Contact ---------- */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 0.85fr 1.15fr;
+            gap: 56px;
+            margin-top: 48px;
+        }
+
+        @media (max-width:900px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .contact-info h4 {
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .contact-info>p {
+            font-size: 14.5px;
+            color: var(--gray-600);
+            line-height: 1.7;
+            margin-bottom: 28px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            margin-bottom: 20px;
+        }
+
+        .contact-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 9px;
+            background: var(--bg-soft);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            flex-shrink: 0;
+        }
+
+        .contact-item .lbl {
+            font-size: 11px;
+            color: var(--gray-400);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-bottom: 3px;
+        }
+
+        .contact-item .val {
+            font-size: 14.5px;
+            font-weight: 600;
+        }
+
+        .contact-item .val a {
+            transition: color .2s ease;
+        }
+
+        .contact-item .val a:hover {
+            color: var(--blue);
+        }
+
+        .contact-form {
+            background: var(--bg-soft);
+            border-radius: 16px;
+            padding: 32px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        @media (max-width:560px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .field label {
+            display: block;
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--gray-600);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-bottom: 8px;
+        }
+
+        .field input,
+        .field textarea {
+            width: 100%;
+            padding: 12px 14px;
+            border-radius: 8px;
+            border: 1px solid #dde1e7;
+            background: #fff;
+            font-family: inherit;
+            font-size: 14px;
+            color: var(--ink);
+        }
+
+        .field textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .field {
+            margin-bottom: 16px;
+        }
+
+        .field input:focus,
+        .field textarea:focus {
+            outline: 2px solid var(--blue);
+            outline-offset: 1px;
+        }
+
+        /* ---------- Footer ---------- */
+        footer {
+            background: var(--navy);
+            color: #c7cdd6;
+            padding: 64px 0 28px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--navy-border);
+        }
+
+        @media (max-width:768px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .footer-grid h5 {
+            font-size: 12px;
+            font-weight: 700;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 18px;
+        }
+
+        .footer-grid ul {
+            list-style: none;
+        }
+
+        .footer-grid li {
+            margin-bottom: 11px;
+            font-size: 14px;
+        }
+
+        .footer-grid a:hover {
+            color: #fff;
+        }
+
+        .footer-logo {
+            font-size: 19px;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 14px;
+        }
+
+        .footer-logo span {
+            color: var(--blue);
+        }
+
+        .footer-about p {
+            font-size: 13.5px;
+            line-height: 1.7;
+            color: #8993a1;
+            margin-bottom: 20px;
+            max-width: 260px;
+        }
+
+        .social-row {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-row a {
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            transition: background .25s ease, transform .25s ease;
+        }
+
+        .social-row a:hover {
+            background: var(--blue);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 24px;
+            font-size: 12.5px;
+            color: #6b7684;
+        }
+
+        @media (max-width:600px) {
+            .footer-bottom {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+        }
+
+        .footer-bottom a {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav">
+            <div class="logo">Talha Asre<span>.</span></div>
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+                <li><a href="#services" class="nav-link" data-section="services">Services</a></li>
+                <li><a href="#portfolio" class="nav-link" data-section="portfolio">Portfolio</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+            </ul>
+            <a href="#contact" class="btn btn-primary">Get in Touch ↗</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div>
+                    <div class="badge hero-anim d1"><span class="dot"></span> Open For ERP, EMR &amp; Cloud Projects
+                    </div>
+                    <h1 class="hero-anim d2">Custom <span class="accent">ERP</span>, Healthcare EMR &amp; Cloud Software
+                        Solutions
+                    </h1>
+                    <p class="hero-anim d3">Software Engineer building secure, scalable, business-driven applications —
+                        ERP
+                        systems, Healthcare EMR platforms, CRMs, and cloud &amp; DevOps automation that solve real
+                        business problems
+                        and drive measurable results.</p>
+                    <div class="hero-actions hero-anim d4">
+                        <a href="#contact" class="btn btn-primary">Start a Project →</a>
+                        <a href="#portfolio" class="btn btn-outline">View My Work →</a>
+                    </div>
+                    <div class="stats hero-anim d5">
+                        <div>
+                            <div class="stat-num" data-count="2.5" data-suffix="K+">0</div>
+                            <div class="stat-label">LinkedIn Network</div>
+                        </div>
+                        <div>
+                            <div class="stat-num" data-count="10" data-suffix="+">0</div>
+                            <div class="stat-label">ERP &amp; Enterprise Systems</div>
+                        </div>
+                        <div>
+                            <div class="stat-num" data-count="5" data-suffix="+">0</div>
+                            <div class="stat-label">Countries Served</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-card hero-anim d3">
+                    <div class="avatar"></div>
+                    <h3>Talha Asre</h3>
+                    <div class="role">Software Engineer · Cloud &amp; DevOps Enthusiast</div>
+                    <div class="pill-row">
+                        <span class="pill">ERP Development</span>
+                        <span class="pill">Healthcare EMR</span>
+                    </div>
+                    <div class="pill-row">
+                        <span class="pill">Cloud &amp; DevOps</span>
+                        <span class="pill">AI &amp; Automation</span>
+                    </div>
+                    <div class="pill-row">
+                        <span class="pill">Kuwait City</span>
+                    </div>
+                    <div class="status-box">
+                        <span class="dot"></span>
+                        2.5k+ LinkedIn Connections · Let's Connect
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="marquee-strip">
+        <div class="marquee-track">
+            <span>ERP Development</span><span>Healthcare EMR Systems</span><span>Salon Chain
+                Management</span><span>Cloud
+                &amp; DevOps</span><span>AI &amp; Automation</span><span>CRM Development</span><span>Admin
+                Panels</span><span>Custom Software</span>
+            <span>ERP Development</span><span>Healthcare EMR Systems</span><span>Salon Chain
+                Management</span><span>Cloud
+                &amp; DevOps</span><span>AI &amp; Automation</span><span>CRM Development</span><span>Admin
+                Panels</span><span>Custom Software</span>
+        </div>
+    </div>
+
+    <section id="about">
+        <div class="container">
+            <div class="eyebrow reveal">About Me</div>
+            <h2 class="section-title reveal">Engineer who turns complex requirements into scalable systems</h2>
+
+            <div class="about-grid">
+                <div class="about-photo reveal">
+                    <div class="photo-badge">
+                        <div class="num">2.5K+</div>
+                        <div class="lbl">LinkedIn<br>Connections</div>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&h=760&fit=crop"
+                        alt="Talha Asre — ERP and Healthcare EMR Software Engineer in Kuwait">
+                    <div class="photo-caption">
+                        <strong>Talha Asre</strong>
+                        <span>Software Engineer · Kuwait City</span>
+                    </div>
+                </div>
+
+                <div class="about-copy reveal">
+                    <h3>Hello, I am Talha Asre</h3>
+                    <p>I'm a Software Engineer specializing in <strong>ERP software development</strong>,
+                        <strong>Healthcare EMR
+                            systems</strong>, and cloud-driven business applications — building secure, scalable,
+                        business-driven
+                        software that solves real world challenges.
+                    </p>
+                    <p>Currently, I develop and maintain a Healthcare Management System (Electronic Medical Records -
+                        EMR) and a
+                        Salon Chain ERP solution, delivering applications that improve operational efficiency and
+                        streamline
+                        business processes.</p>
+                    <p>My experience spans custom software development, eCommerce solutions, server management, dynamic
+                        web
+                        applications and admin panels, mobile-first systems, and lead generation and advertising
+                        platforms. I focus
+                        on building reliable systems, improving performance, and translating complex business
+                        requirements into
+                        practical, user-focused solutions.</p>
+                    <p>I'm passionate about Cloud Computing, DevOps, AI, and Automation, and continuously work on
+                        expanding my
+                        expertise to build modern, scalable, and intelligent software systems.</p>
+                    <div class="tag-row">
+                        <span class="tag">ERP Software Development</span>
+                        <span class="tag">Healthcare EMR Systems</span>
+                        <span class="tag">Cloud Computing</span>
+                        <span class="tag">DevOps</span>
+                        <span class="tag">AI &amp; Automation</span>
+                        <span class="tag">Custom CRM Development</span>
+                        <span class="tag">Admin Panels</span>
+                        <span class="tag">Custom Software</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <div class="eyebrow reveal">What I Offer</div>
+            <h2 class="section-title reveal">Software Solutions Built For Real Business Challenges</h2>
+            <p class="section-sub reveal">From enterprise ERP platforms to Healthcare EMR systems and cloud
+                infrastructure —
+                secure, scalable software designed around how your business actually runs.</p>
+            <div class="tag-row reveal" style="margin-top:20px; margin-bottom:8px;">
+                <span class="tag">Custom CRM Development</span>
+                <span class="tag">Lead Generation Platforms</span>
+                <span class="tag">Mobile-First Web Apps</span>
+                <span class="tag">Server Management</span>
+            </div>
+
+            <div class="service-cards reveal-group">
+                <div class="service-card reveal">
+                    <div class="icon-box">⚙️</div>
+                    <h4>ERP &amp; Business Systems</h4>
+                    <p>Custom ERP software development for clinics, salon chains, and enterprises — admin panels, CRMs,
+                        and
+                        internal tools that streamline operations end to end.</p>
+                    <div class="service-tags">
+                        <span>Clinic ERP</span>
+                        <span>Salon Chain ERP</span>
+                        <span>Admin Panels</span>
+                    </div>
+                </div>
+                <div class="service-card reveal">
+                    <div class="icon-box">🏥</div>
+                    <h4>Healthcare EMR Software</h4>
+                    <p>Electronic Medical Records (EMR) systems built for real clinical workflows, helping healthcare
+                        teams manage
+                        patient data securely and efficiently.</p>
+                    <div class="service-tags">
+                        <span>EMR Systems</span>
+                        <span>Patient Records</span>
+                        <span>Data Security</span>
+                    </div>
+                </div>
+                <div class="service-card reveal">
+                    <div class="icon-box">☁️</div>
+                    <h4>Cloud, DevOps &amp; Automation</h4>
+                    <p>Scalable cloud infrastructure, server management, and AI-driven automation pipelines that keep
+                        applications
+                        fast, reliable, and easy to maintain.</p>
+                    <div class="service-tags">
+                        <span>Cloud Computing</span>
+                        <span>DevOps</span>
+                        <span>AI Automation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <div class="container">
+            <div class="eyebrow reveal">Portfolio</div>
+            <h2 class="section-title reveal">Real Systems. Real Business Impact.</h2>
+            <p class="section-sub reveal">Selected ERP, Healthcare EMR, and web engineering work for clients across
+                Kuwait,
+                France, UK, Australia, US, and India.</p>
+
+            <div class="portfolio-grid reveal-group">
+                <div class="project-card reveal">
+                    <div class="project-thumb thumb-1">
+                        <span class="project-tag">Healthcare · EMR</span>
+                        <span class="initials" style="color:#1e3a8a;">EMR</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="meta">Healthcare · Clinic Management</div>
+                        <h4>Healthcare Management System (EMR)</h4>
+                        <p>Electronic Medical Records platform for clinic management — patient records, scheduling, and
+                            workflows
+                            built for real healthcare operations.</p>
+                    </div>
+                </div>
+                <div class="project-card reveal">
+                    <div class="project-thumb thumb-2">
+                        <span class="project-tag on-dark">ERP · Multi-location</span>
+                        <span class="initials">SC</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="meta">Business · Salon Chain</div>
+                        <h4>Salon Chain ERP Software</h4>
+                        <p>End-to-end ERP for managing a multi-branch salon chain — appointments, staff, inventory, and
+                            business
+                            operations in one system.</p>
+                    </div>
+                </div>
+                <div class="project-card reveal">
+                    <div class="project-thumb thumb-3">
+                        <span class="project-tag on-dark">Industrial · Admin Panel</span>
+                        <span class="initials">SV</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="meta">Industrial · Steel &amp; Valves</div>
+                        <h4>Steel &amp; Valves Admin Panel &amp; CRM</h4>
+                        <p>Custom admin panel and CRM built for steel and valve manufacturing businesses to manage
+                            orders,
+                            inventory, and client relationships.</p>
+                    </div>
+                </div>
+                <div class="project-card reveal">
+                    <div class="project-thumb thumb-4">
+                        <span class="project-tag on-dark">Web · International</span>
+                        <span class="initials">LX</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="meta">France · UK · Australia · US · India</div>
+                        <h4>High-Engagement Luxury Websites</h4>
+                        <p>Custom luxury brand websites built for clients across France, UK, Australia, US, and India,
+                            focused on
+                            premium design and performance.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="center-btn">
+                <a href="#contact" class="btn btn-light-outline">Want to See More? Let's Talk →</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="process">
+        <div class="container">
+            <div class="process-header">
+                <div class="eyebrow reveal">How I Work</div>
+                <h2 class="section-title reveal" style="text-align:center;">Simple Process. Exceptional Results.</h2>
+            </div>
+
+            <div class="process-grid reveal-group">
+                <div class="reveal">
+                    <div class="step-num">01</div>
+                    <h5>Discovery</h5>
+                    <p>We discuss your business requirements, workflows, timeline, and technical scope in detail.</p>
+                </div>
+                <div class="reveal">
+                    <div class="step-num">02</div>
+                    <h5>Architecture & Proposal</h5>
+                    <p>Clear system architecture, deliverables, and scope. No hidden surprises, fully transparent.</p>
+                </div>
+                <div class="reveal">
+                    <div class="step-num">03</div>
+                    <h5>Build &amp; Review</h5>
+                    <p>Secure, maintainable code with regular updates and reviews at every milestone.</p>
+                </div>
+                <div class="reveal">
+                    <div class="step-num">04</div>
+                    <h5>Launch &amp; Support</h5>
+                    <p>Go live with post-launch support, monitoring, and ongoing maintenance available.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <div class="eyebrow reveal">Client Reviews</div>
+            <h2 class="section-title reveal" style="color:#fff;">What Clients Say</h2>
+
+            <div class="testi-grid reveal-group">
+                <div class="testi-card reveal">
+                    <div class="stars">★★★★★</div>
+                    <p>"Talha built our clinic's EMR system exactly around how our staff actually work. Reliable,
+                        secure, and easy
+                        for our team to use daily."</p>
+                    <div class="testi-person">
+                        <div class="testi-avatar">CD</div>
+                        <div>
+                            <strong>Clinic Director</strong>
+                            <span>Healthcare, Kuwait</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testi-card reveal">
+                    <div class="stars">★★★★★</div>
+                    <p>"Our salon chain ERP replaced three separate tools. Talha understood the operations side, not
+                        just the
+                        code. Huge efficiency gain."</p>
+                    <div class="testi-person">
+                        <div class="testi-avatar">SO</div>
+                        <div>
+                            <strong>Salon Chain Owner</strong>
+                            <span>Business Operations</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testi-card reveal">
+                    <div class="stars">★★★★★</div>
+                    <p>"Professional and detail-oriented. The luxury site he built for us performs beautifully and
+                        matched our
+                        brand across every market."</p>
+                    <div class="testi-person">
+                        <div class="testi-avatar">BM</div>
+                        <div>
+                            <strong>Brand Manager</strong>
+                            <span>Luxury Retail, France</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="eyebrow reveal">Contact</div>
+            <h2 class="section-title reveal">Let's Connect</h2>
+            <p class="section-sub reveal">Interested in ERP software development, Healthcare EMR systems, or cloud &
+                automation solutions? Fill out the form below and I'll get back to you. Based in Kuwait City, working
+                with
+                clients worldwide.</p>
+
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <h4>Have a project in mind?</h4>
+                    <p>Whether you need an ERP system, a healthcare EMR platform, an admin panel, or cloud &amp;
+                        automation
+                        support, I'm here to help you build something reliable. Let's talk about your project.</p>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <div class="lbl">Email</div>
+                            <div class="val"><a href="mailto:talha.asre@example.com">talha.asre@example.com</a></div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">💼</div>
+                        <div>
+                            <div class="lbl">LinkedIn</div>
+                            <div class="val"><a href="https://linkedin.com" target="_blank" rel="noopener">2.5k+
+                                    Connections · Let's
+                                    Connect</a></div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <div class="lbl">Location</div>
+                            <div class="val">Kuwait City Metropolitan Area</div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">⏱️</div>
+                        <div>
+                            <div class="lbl">Response Time</div>
+                            <div class="val">Within 24-48 hours</div>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form reveal" id="contact-form">
+                    <div class="form-row">
+                        <div class="field">
+                            <label>Your Name</label>
+                            <input type="text" id="cf-name" placeholder="John Smith" required>
+                        </div>
+                        <div class="field">
+                            <label>Email Address</label>
+                            <input type="email" id="cf-email" placeholder="john@example.com" required>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label>Project Type</label>
+                        <input type="text" id="cf-type" placeholder="ERP System / EMR / Cloud & DevOps">
+                    </div>
+                    <div class="field">
+                        <label>Company / Industry</label>
+                        <input type="text" id="cf-company" placeholder="e.g. Healthcare, Retail, Industrial">
+                    </div>
+                    <div class="field">
+                        <label>Your Message</label>
+                        <textarea id="cf-message" placeholder="Tell me about your project..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-dark" style="width:100%; justify-content:center;">Send Message
+                        ↗</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo">Talha Asre<span>.</span></div>
+                    <p>Software Engineer from Kuwait City, building secure, scalable business applications, ERP
+                        solutions, and
+                        cloud-driven systems for clients worldwide.</p>
+                    <div class="social-row">
+                        <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+                        <a href="mailto:talha.asre@example.com" aria-label="Email">✉</a>
+                        <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub">GH</a>
+                        <a href="#contact" aria-label="Contact">●</a>
+                    </div>
+                </div>
+                <div>
+                    <h5>Navigation</h5>
+                    <ul>
+                        <li><a href="#about">About Me</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Services</h5>
+                    <ul>
+                        <li><a href="#services">ERP & Business Systems</a></li>
+                        <li><a href="#services">Healthcare EMR</a></li>
+                        <li><a href="#services">Cloud & DevOps</a></li>
+                        <li><a href="#services">AI & Automation</a></li>
+                        <li><a href="#services">Admin Panels & CRMs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Contact</h5>
+                    <ul>
+                        <li>Email:<br>talha.asre@example.com</li>
+                        <li>LinkedIn:<br>2.5k+ Connections</li>
+                        <li>Location:<br>Kuwait City</li>
+                        <li>Focus:<br>ERP, EMR & Cloud Systems</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Talha Asre. All rights reserved.</span>
+                <span>Engineering scalable systems from Kuwait 🇰🇼</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll-reveal animation
+        const revealEls = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+        revealEls.forEach(el => revealObserver.observe(el));
+
+        // Active nav link highlighting
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = Array.from(navLinks).map(l => document.getElementById(l.dataset.section)).filter(Boolean);
+        const navObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const link = document.querySelector('.nav-link[data-section="' + entry.target.id + '"]');
+                if (!link) return;
+                if (entry.isIntersecting) {
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    link.classList.add('active');
+                }
+            });
+        }, { threshold: 0.3, rootMargin: '-90px 0px -50% 0px' });
+        sections.forEach(sec => navObserver.observe(sec));
+
+        // Animated stat counters (run once, on load, hero is above the fold)
+        function animateCount(el) {
+            const target = parseFloat(el.dataset.count);
+            const suffix = el.dataset.suffix || '';
+            const isDecimal = target % 1 !== 0;
+            const duration = 1400;
+            const start = performance.now();
+            function tick(now) {
+                const progress = Math.min((now - start) / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                const value = target * eased;
+                el.textContent = (isDecimal ? value.toFixed(1) : Math.round(value)) + suffix;
+                if (progress < 1) requestAnimationFrame(tick);
+            }
+            requestAnimationFrame(tick);
+        }
+        window.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.stat-num[data-count]').forEach(el => {
+                setTimeout(() => animateCount(el), 400);
+            });
+        });
+
+        // Contact form -> opens the visitor's email client with a pre-filled message
+        const form = document.getElementById('contact-form');
+        if (form) {
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const name = document.getElementById('cf-name').value || 'there';
+                const email = document.getElementById('cf-email').value || '';
+                const type = document.getElementById('cf-type').value || 'N/A';
+                const company = document.getElementById('cf-company').value || 'N/A';
+                const message = document.getElementById('cf-message').value || '';
+
+                const subject = encodeURIComponent('New Project Inquiry from ' + name);
+                const body = encodeURIComponent(
+                    'Name: ' + name + '\n' +
+                    'Email: ' + email + '\n' +
+                    'Project Type: ' + type + '\n' +
+                    'Company / Industry: ' + company + '\n\n' +
+                    'Message:\n' + message
+                );
+                window.location.href = 'mailto:talha.asre@example.com?subject=' + subject + '&body=' + body;
+            });
+        }
+    </script>
+</body>
+
+</html>
